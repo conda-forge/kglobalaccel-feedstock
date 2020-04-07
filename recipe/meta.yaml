@@ -1,5 +1,5 @@
 {% set name = "kglobalaccel" %}
-{% set version = "5.67.0" %}
+{% set version = "5.68.0" %}
 {% set major_minor = ".".join(version.split(".")[:2]) %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://download.kde.org/stable/frameworks/{{ major_minor }}/kglobalaccel-{{ version }}.tar.xz
-  sha256: 970d05525a9bbd54db11a0871d849a1319b9d241949175098533e3e78adf4405
+  sha256: 2eb710a3f29cbc8b7875fb3e8315d7c8e3b5bb93867e0a34cd5cdbac690bcbbf
 
 build:
   number: 0
@@ -52,7 +52,7 @@ about:
   license: LGPL-v2.1-or-later
   license_family: GPL
   license_file: COPYING.LIB
-  summary: 'Global desktop keyboard shortcuts'
+  summary: Global desktop keyboard shortcuts
   description: |
     KGlobalAccel allows you to have global accelerators that are independent
     of the focused window. Unlike regular shortcuts, the application's window

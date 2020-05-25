@@ -1,5 +1,5 @@
 {% set name = "kglobalaccel" %}
-{% set version = "5.69.0" %}
+{% set version = "5.70.0" %}
 {% set major_minor = ".".join(version.split(".")[:2]) %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://download.kde.org/stable/frameworks/{{ major_minor }}/kglobalaccel-{{ version }}.tar.xz
-  sha256: bdaab7b8dfdca007025a194c928eec62b603be958024d556885d835d4cbf06e7
+  sha256: 7fa44a87ddfb6e829687e9041561ae73346037a94c78530fe43cfa8ad88bb842
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make
-    - extra-cmake-modules
+    - extra-cmake-modules >={{ version }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
@@ -35,11 +35,11 @@ requirements:
     - libxcb
     - xcb-util-keysyms
     - qt
-    - kcrash
-    - kconfig
-    - kcoreaddons
-    - kdbusaddons
-    - kwindowsystem
+    - kcrash >={{ version }}
+    - kconfig >={{ version }}
+    - kcoreaddons >={{ version }}
+    - kdbusaddons >={{ version }}
+    - kwindowsystem >={{ version }}
   run:
     - libxcb
 

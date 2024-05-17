@@ -11,7 +11,7 @@ source:
   sha256: 3a846f783ccb68da1f152fb5778612c4ed14cd79c6b5929ef729cf59e47462d4
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   run_exports:
     - {{ pin_subpackage('kglobalaccel', max_pin='x.x') }}
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make

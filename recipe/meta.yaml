@@ -1,5 +1,5 @@
 {% set name = "kglobalaccel" %}
-{% set version = "5.76.0" %}
+{% set version = "6.1.0" %}
 {% set major_minor = ".".join(version.split(".")[:2]) %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://download.kde.org/stable/frameworks/{{ major_minor }}/kglobalaccel-{{ version }}.tar.xz
-  sha256: 3a846f783ccb68da1f152fb5778612c4ed14cd79c6b5929ef729cf59e47462d4
+  sha256: 885b13d3888eebe585589dc288e3826044ab5bf3b8e2a749b9070d93d32f64f2
 
 build:
   number: 0
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make
